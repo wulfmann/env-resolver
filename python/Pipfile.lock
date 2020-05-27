@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8f89f6e13cd4b3ec108a2326798a2636fd155cd3d8981284467351c7640d3227"
+            "sha256": "1e8ac1aed5c8b0f4a933b805f5a8e9297809fa4d13feef20b1a2219e53e8a780"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -131,6 +131,14 @@
             ],
             "markers": "python_version < '3.8'",
             "version": "==1.6.0"
+        },
+        "jeepney": {
+            "hashes": [
+                "sha256:3479b861cc2b6407de5188695fa1a8d57e5072d7059322469b62628869b8e36e",
+                "sha256:d6c6b49683446d2407d2fe3acb7a368a77ff063f9182fe427da15d622adc24cf"
+            ],
+            "index": "pypi",
+            "version": "==0.4.3"
         },
         "jmespath": {
             "hashes": [

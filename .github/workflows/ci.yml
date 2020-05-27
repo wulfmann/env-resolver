@@ -23,11 +23,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install --dev
+
     - name: Build
+      run: pipenv run python setup.py sdist bdist_wheel
+
+    - name: Publish
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         TWINE_NON_INTERACTIVE: true
       run: |
-        pipenv run python setup.py sdist bdist_wheel
+        ls  
         pipenv run twine upload dist/*

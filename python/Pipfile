@@ -16,6 +16,7 @@ wheel = "*"
 twine = "*"
 keyring = "*"
 keyrings-alt = "*"
+jeepney = "*"
 
 [requires]
 python_version = "3.7"
