@@ -23,12 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install --dev
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        TWINE_NON_INTERACTIVE: true
-        PYTHON_KEYRING_BACKEND: keyring.backends.null.Keyring
-      run: |
-        sh build.sh
-        pipenv run twine upload dist/*
+    - name: Build
+      run: pipenv run python setup.py sdist bdist_wheel
+    - name: Publish
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_PASSWORD }}
