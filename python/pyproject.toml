@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "env_resolver"
+version = "0.1.0"
+description = "A utility for resolving ssm parameters and secretsmanager secrets"
+authors = ["Joe Snell <joepsnell@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"
