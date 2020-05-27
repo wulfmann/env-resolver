@@ -18,6 +18,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -27,4 +28,5 @@ jobs:
         poetry install
     - name: Build & Deploy
       run: |
+        source $HOME/.poetry/env
         poetry publish --build -u __token__ -p ${{ secrets.PYPI_PASSWORD }}
