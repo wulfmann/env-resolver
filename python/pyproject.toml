@@ -19,3 +19,4 @@ python = ">=3.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.4"
+boto3 = "*"
