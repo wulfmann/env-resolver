@@ -1,0 +1,31 @@
+name: Node PR's
+
+on:
+  pull_request:
+    paths:
+      - 'node/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: node
+
+    strategy:
+      matrix:
+        node: ['10', '12']
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup node ${{ matrix.node }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+
+    - name: Install dependencies
+      run: |
+        npm i -g yarn
+        yarn

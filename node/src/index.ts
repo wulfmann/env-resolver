@@ -1,0 +1,1 @@
+export const resolve = () => console.log('hello world');

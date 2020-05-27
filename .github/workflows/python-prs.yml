@@ -1,25 +1,29 @@
-name: CI
+name: Python PR's
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    paths:
+      - 'python/**'
 
 jobs:
-  python:
+  build:
     runs-on: ubuntu-latest
 
     defaults:
       run:
         working-directory: python
 
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: ${{ matrix.python-version }}
 
     - uses: Gr1N/setup-poetry@v2
     - uses: actions/cache@v2
@@ -41,6 +45,3 @@ jobs:
 
     - name: Build
       run: poetry build
-
-    - name: Publish
-      run: poetry publish -u __token__ -p ${{ secrets.PYPI_PASSWORD }}

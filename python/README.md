@@ -1,6 +1,6 @@
 # ENV Resolver (Python)
 
-![](https://github.com/wulfmann/env-resolver/workflows/CI/badge.svg)
+![](https://github.com/wulfmann/env-resolver/workflows/Python%20CI/badge.svg)
 
 This is a small utility to resolve [SSM Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) and [Secretsmanager Secrets](https://aws.amazon.com/secrets-manager/) and conditionally set them in the environment.
 

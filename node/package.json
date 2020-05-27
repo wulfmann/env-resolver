@@ -1,0 +1,16 @@
+{
+  "name": "env-resolver",
+  "version": "0.1.0",
+  "description": "A utility for resolving ssm parameters and secretsmanager secrets",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "https://github.com/wulfmann/env-resolver/tree/master/node",
+  "author": "Joe Snell <joepsnell@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.3",
+    "@types/node": "^14.0.5"
+  }
+}
