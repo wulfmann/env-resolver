@@ -24,7 +24,10 @@ jobs:
         pip install pipenv
         pipenv install --dev
     - name: Build
-      run: pipenv run python setup.py sdist bdist_wheel
+      run: |
+        pipenv run python setup.py sdist bdist_wheel
+        ls
+
     - name: Publish
       uses: pypa/gh-action-pypi-publish@master
       with:
