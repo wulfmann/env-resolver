@@ -9,7 +9,7 @@ jobs:
   python:
     runs-on: ubuntu-latest
     defaults:
-      runs:
+      run:
         working-directory: python
 
     steps:
