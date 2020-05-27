@@ -45,5 +45,8 @@ jobs:
         poetry check
         poetry run pytest
 
-    - name: Build & Deploy
-      run: poetry publish --build 
+    - name: Build
+      run: poetry build
+
+    - name: Publish
+      run: poetry publish -u __token__ -p ${{ secrets.PYPI_PASSWORD }}
