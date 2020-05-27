@@ -2,7 +2,7 @@ import os, json
 from unittest.mock import patch, call
 from unittest import TestCase
 
-from parameter_resolver.main import resolve
+from env_resolver.main import resolve
 
 class MainTest(TestCase):
 
