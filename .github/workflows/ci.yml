@@ -24,13 +24,10 @@ jobs:
         pip install pipenv
         pipenv install --dev
     - name: Build
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        TWINE_NON_INTERACTIVE: true
       run: |
         pipenv run python setup.py sdist bdist_wheel
-        ls
-
-    - name: Publish
-      uses: pypa/gh-action-pypi-publish@master
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_PASSWORD }}
-        packages_dir: python/dist/*
+        pipenv run twine upload dist/*
