@@ -1,5 +1,3 @@
-# Parameter Resolver
+# ENV Resolver
 
-## Python
-
-## Node
+A utility for resolving AWS SSM Parameters and Secretsmanager Secrets
