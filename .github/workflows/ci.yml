@@ -26,6 +26,13 @@ jobs:
         source $HOME/.poetry/env
         poetry env info
         poetry install
+
+    - name: Run tests
+      run: |
+        source $HOME/.poetry/env
+        poetry check
+        poetry run pytest
+
     - name: Build & Deploy
       run: |
         source $HOME/.poetry/env
