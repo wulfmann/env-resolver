@@ -1,8 +1,18 @@
 [tool.poetry]
 name = "env_resolver"
-version = "0.1.0"
+version = "0.1.1"
 description = "A utility for resolving ssm parameters and secretsmanager secrets"
 authors = ["Joe Snell <joepsnell@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/wulfmann/env-resolver/python"
+keywords = [
+    "ssm",
+    "secretsmanager",
+    "aws",
+    "environment",
+    "utility"
+]
 
 [tool.poetry.dependencies]
 python = ">=3.7"
