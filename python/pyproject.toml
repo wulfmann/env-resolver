@@ -5,7 +5,7 @@ description = "A utility for resolving ssm parameters and secretsmanager secrets
 authors = ["Joe Snell <joepsnell@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "3"
+python = "3.x"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.4"

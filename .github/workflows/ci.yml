@@ -23,6 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
         source $HOME/.poetry/env
+        poetry env info
         poetry install
     - name: Build and Publish
       run: poetry publish --build -u __token__ -p ${{ secrets.PYPI_PASSWORD }}
