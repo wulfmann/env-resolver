@@ -4,6 +4,14 @@ This is a small utility to resolve [SSM Parameters](https://docs.aws.amazon.com/
 
 This is helpful for services like [AWS Batch](https://aws.amazon.com/batch/) or [AWS Lambda](https://aws.amazon.com/lambda/) where there is not a way natively to pass secret values.
 
+## Install
+
+```bash
+pip install env-resolver
+```
+
+This package assumes that you already depend on [boto3](https://github.com/boto/boto3) and have it installed as a dependency of your project. If you are using this package in [AWS Lambda](https://aws.amazon.com/lambda/), `boto3` will already be available.
+
 ## Quick Start
 
 ### Parameter Store
