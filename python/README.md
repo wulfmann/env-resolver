@@ -97,14 +97,16 @@ secret = {
 
 PR's are welcome!
 
+This project uses [Poetry](https://python-poetry.org/) for dependency / environment management.
+
 ### Install Dependencies
 
 ```bash
-pipenv install --dev
+poetry install
 ```
 
 ### Tests
 
 ```bash
-pipenv run pytest
+poetry run pytest
 ```
