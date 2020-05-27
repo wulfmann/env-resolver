@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "env_resolver"
-version = "0.1.4"
+version = "0.1.5"
 description = "A utility for resolving ssm parameters and secretsmanager secrets"
 authors = ["Joe Snell <joepsnell@gmail.com>"]
 license = "MIT"
