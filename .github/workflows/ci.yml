@@ -25,5 +25,4 @@ jobs:
         source $HOME/.poetry/env
         poetry env info
         poetry install
-        pytest
         poetry publish --build -u __token__ -p ${{ secrets.PYPI_PASSWORD }}
