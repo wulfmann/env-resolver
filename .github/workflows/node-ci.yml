@@ -34,7 +34,9 @@ jobs:
         yarn test
 
     - name: Build and Deploy (NPM)
-      run: yarn publish
+      run: |
+        yarn build
+        yarn publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
 
